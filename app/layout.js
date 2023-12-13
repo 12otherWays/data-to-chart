@@ -1,9 +1,12 @@
 import "./globals.css";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
+      </body>
     </html>
   );
 }

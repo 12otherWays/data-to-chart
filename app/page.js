@@ -1,13 +1,11 @@
-import Image from "next/image";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-
-const theme = createTheme({
-  palette: {
-    primary: lime,
-    secondary: purple,
-  },
-});
+import { ThemeProvider } from "@mui/material/styles";
+import Theme from "./utils/Theme";
+import Button from "@mui/material/Button";
 
 export default function Home() {
-  return <ThemeProvider theme={theme}></ThemeProvider>;
+  return (
+    <ThemeProvider theme={Theme}>
+      <Button>shdfhl</Button>
+    </ThemeProvider>
+  );
 }
