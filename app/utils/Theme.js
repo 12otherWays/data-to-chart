@@ -1,11 +1,12 @@
 "use client";
-import { createTheme } from "@mui/material/styles";
 
-const Theme = createTheme({
+const getDesignTokens = (type) => ({
   palette: {
-    type: "light",
+    type,
     primary: {
       main: "#e8a53f",
+      // light: "",
+      // dark: "",
       contrastText: "#333333",
     },
     secondary: {
@@ -30,24 +31,30 @@ const Theme = createTheme({
     ...(type === "light"
       ? {
           background: {
-            default: "#fafafa",
-            paper: "#fff",
+            default: "#fff",
+            paper: "#fafafa",
           },
         }
       : {
           background: {
-            default: "#fafafa",
-            paper: "#fff",
+            default: "#1b1b1b",
+            paper: "#303234",
           },
         }),
   },
   typography: {
+    fontFamily: "IBM Plex Sans",
+    button: {
+      fontFamily: "IBM Plex Sans",
+      fontSize: "15px",
+      fontWeight: 700,
+      lineHeight: 1.6,
+    },
     h1: {
       fontFamily: "Nunito Sans",
       fontWeight: 600,
       lineHeight: 1.6,
     },
-    fontFamily: "IBM Plex Sans",
     subtitle1: {
       fontFamily: "Lora",
       fontSize: "1.9rem",
@@ -55,13 +62,7 @@ const Theme = createTheme({
       lineHeight: 2.01,
     },
     body1: {
-      fontFamily: "Droid Sans",
-    },
-    button: {
-      fontFamily: "Bangers",
-      fontSize: "1.2rem",
-      fontWeight: 400,
-      lineHeight: 1.6,
+      fontFamily: "IBM Plex Sans",
     },
     caption: {
       fontSize: "1.9rem",
@@ -72,9 +73,9 @@ const Theme = createTheme({
     },
   },
   spacing: 8,
-  direction: "rtl",
+  // direction: "rtl",
   shape: {
-    borderRadius: 4,
+    borderRadius: 8,
   },
   props: {
     MuiButton: {
@@ -117,4 +118,4 @@ const Theme = createTheme({
     },
   },
 });
-export default Theme;
+export default getDesignTokens;
