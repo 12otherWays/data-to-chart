@@ -4,13 +4,13 @@ const getDesignTokens = (type) => ({
   palette: {
     type,
     primary: {
-      main: "#e8a53f",
-      // light: "",
-      // dark: "",
+      main: "#eb9d2a",
+      dark: "rgba(205,132,7, 0.6)",
       contrastText: "#333333",
     },
     secondary: {
       main: "#d2592a",
+      dark: "rgba(147, 62, 29, 0.7)",
       contrastText: "#333333",
     },
     error: {
@@ -45,8 +45,7 @@ const getDesignTokens = (type) => ({
   typography: {
     fontFamily: "IBM Plex Sans",
     button: {
-      fontFamily: "IBM Plex Sans",
-      fontSize: "15px",
+      fontFamily: "Nunito Sans",
       fontWeight: 700,
       lineHeight: 1.6,
     },
@@ -76,6 +75,63 @@ const getDesignTokens = (type) => ({
   // direction: "rtl",
   shape: {
     borderRadius: 8,
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          padding: "8px 20px",
+          textTransform: "none",
+          borderStyle: "solid",
+          borderWidth: "2px",
+          "&:hover": {
+            borderWidth: "2px",
+          },
+        },
+      },
+      variants: [
+        {
+          props: { variant: "outlined", color: "primary" },
+          style: {
+            borderColor: "#eb9d2a",
+            "&:hover": {
+              borderColor: "#eb9d2a",
+              transform: "translateY(-2px)",
+            },
+          },
+        },
+        {
+          props: { variant: "contained", color: "primary" },
+          style: {
+            borderColor: "rgba(111, 74, 20, 0.6)",
+            "&:hover": {
+              transform: "translateY(-2px)",
+              backgroundColor: "#eb9d2a",
+            },
+          },
+        },
+        {
+          props: { variant: "outlined", color: "secondary" },
+          style: {
+            borderColor: "#d2592a",
+            "&:hover": {
+              borderColor: "#d2592a",
+              transform: "translateY(-2px)",
+            },
+          },
+        },
+        {
+          props: { variant: "contained", color: "secondary" },
+          style: {
+            borderColor: "#933E1D",
+            "&:hover": {
+              backgroundColor: "#d2592a",
+              transform: "translateY(-2px)",
+            },
+          },
+        },
+      ],
+    },
   },
   props: {
     MuiButton: {
