@@ -1,5 +1,3 @@
-"use client";
-
 const getDesignTokens = (type) => ({
   palette: {
     type,

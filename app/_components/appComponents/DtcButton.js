@@ -1,4 +1,3 @@
-"use client";
 import * as React from "react";
 import PropTypes from "prop-types";
 import { styled, useThemeProps } from "@mui/material/styles";
@@ -70,7 +69,7 @@ const ButtonBottom = styled("div", {
     }),
 }));
 
-const DtcButton = React.forwardRef(function Stat(inProps, ref) {
+const DtcButton = React.forwardRef(async function Stat(inProps, ref) {
   const props = useThemeProps({ props: inProps, name: "MuiButtonLyman" });
   const { value, variant, color, ...other } = props;
 
