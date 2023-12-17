@@ -4,7 +4,7 @@
     "about": "About"
   },
   "page": {
-    "home": {},
+    "chart_list_input_placeholder": "Select from below chart",
     "about": {
       "title": "About Us",
       "description": "This is the about page"
